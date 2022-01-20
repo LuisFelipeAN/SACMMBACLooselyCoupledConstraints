@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.ufjf.sacm.aceditor.sacm2.implementationConstraintType">
+      <type
+            id="Mapping">
+         <provideInformation>
+            <userInputTypeInformation
+                  class="org.ufjf.sacm.aceditor.mbac.constrains.provider.MappingImplementationConstraint">
+            </userInputTypeInformation></provideInformation>
+         <painter
+               class="org.ufjf.sacm.aceditor.mbac.constrains.provider.MappingImplementationConstraint">
+         </painter>
+         <isApplicableTo>
+            <and>
+               <instanceof
+                     value="org.ufjf.sacm.aceditor.sacm2.Term">
+               </instanceof>
+               <and>
+                  <with
+                        variable="isAbstract">
+                     <equals
+                           value="true">
+                     </equals>
+                  </with>
+                  <with
+                        variable="implementationConstraint">
+                     <iterate
+                           ifEmpty="true"
+                           operator="and">
+                        <not>
+                           <test
+                                 property="org.ufjf.sacm.aceditor.sacm2.SACMPropertyTester.properties.ImplementationConstraintType"
+                                 value="Mapping">
+                           </test>
+                        </not>
+                     </iterate>
+                  </with>
+               </and>
+            </and>
+         </isApplicableTo>
+      </type>
+   </extension>
+
+</plugin>
