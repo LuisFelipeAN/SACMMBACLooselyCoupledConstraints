@@ -41,6 +41,32 @@
             </and>
          </isApplicableTo>
       </type>
+      <type
+            id="Select">
+         <provideInformation>
+            <userInputTypeInformation
+                  class="org.ufjf.sacm.aceditor.mbac.constrains.provider.SelectImplementationConstraint">
+            </userInputTypeInformation>
+         </provideInformation>
+         <painter
+               class="org.ufjf.sacm.aceditor.mbac.constrains.provider.SelectImplementationConstraint">
+         </painter>
+         <isApplicableTo>
+            <and>
+               <instanceof
+                     value="org.ufjf.sacm.aceditor.sacm2.Expression">
+               </instanceof>
+               <and>
+                  <with
+                        variable="isAbstract">
+                     <equals
+                           value="true">
+                     </equals>
+                  </with>
+               </and>
+            </and>
+         </isApplicableTo>
+      </type>
    </extension>
 
 </plugin>
