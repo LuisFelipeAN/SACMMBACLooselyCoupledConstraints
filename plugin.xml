@@ -41,6 +41,45 @@
             </and>
          </isApplicableTo>
       </type>
+      <type
+            id="Children">
+         <provideInformation>
+            <userInputTypeInformation
+                  class="org.ufjf.sacm.aceditor.mbac.constrains.provider.ChildrenImplementationConstraint">
+            </userInputTypeInformation>
+         </provideInformation>
+         <painter
+               class="org.ufjf.sacm.aceditor.mbac.constrains.provider.ChildrenImplementationConstraint">
+         </painter>
+         <isApplicableTo>
+            <and>
+               <instanceof
+                     value="org.ufjf.sacm.aceditor.sacm2.Term">
+               </instanceof>
+               <and>
+                  <with
+                        variable="isAbstract">
+                     <equals
+                           value="true">
+                     </equals>
+                  </with>
+                  <with
+                        variable="implementationConstraint">
+                     <iterate
+                           ifEmpty="true"
+                           operator="and">
+                        <not>
+                           <test
+                                 property="org.ufjf.sacm.aceditor.sacm2.SACMPropertyTester.properties.ImplementationConstraintType"
+                                 value="Children">
+                           </test>
+                        </not>
+                     </iterate>
+                  </with>
+               </and>
+            </and>
+         </isApplicableTo>
+      </type>
    </extension>
 
 </plugin>
