@@ -4,7 +4,7 @@ Bundle-Name: Provider
 Bundle-SymbolicName: org.ufjf.sacm.aceditor.mbac.constrains.provider;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: org.ufjf.sacm.aceditor.mbac.constrains.provider
-Bundle-RequiredExecutionEnvironment: JavaSE-15
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.ufjf.sacm.aceditor.sacm2.figures;bundle-version="1.0.0",
  org.ufjf.sacm.aceditor.sacm2;bundle-version="1.0.0",
  org.eclipse.core.runtime;bundle-version="3.12.0",
